@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VT TECH - Gestionar Rondas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="barra-nav">
+        <div class="logo">VT <span>TECH</span></div>
+        <input type="checkbox" id="menu" class="menu-casilla">
+        <label for="menu" class="menu-boton"><span></span></label>
+        <nav class="enlaces-nav">
+            <a href="torneos-organizador.html" class="enlace-nav active">Mis torneos</a>
+            <a href="login.html" class="enlace-nav enlace-nav-peligro">Salir</a>
+        </nav>
+    </header>
+
+    <main class="container" style="max-width: 700px;">
+        <div class="mb-2">
+            <a href="torneos-organizador.html" class="boton-volver">← Volver al panel</a>
+            <h2 class="titulo-pagina mt-2">Gestionar <span>rondas</span></h2>
+        </div>
+
+        <section class="tarjeta mb-2">
+            <div class="tarjeta-ronda">
+                <h4>Ronda 1</h4>
+                <span class="insignia">Completada</span>
+            </div>
+            <div class="partido-ronda">
+                <span>Jugador 1 <small class="texto-tenue">vs</small> Jugador 2</span>
+                <strong class="resultado-partido">3 - 1</strong>
+            </div>
+            <div class="partido-ronda">
+                <span>Jugador 3 <small class="texto-tenue">vs</small> Jugador 4</span>
+                <strong class="resultado-partido">2 - 2</strong>
+            </div>
+        </section>
+
+        <section class="tarjeta" style="border-left: 4px solid var(--primario);">
+            <div class="tarjeta-ronda">
+                <h4>Ronda 2</h4>
+                <span class="estado-chip estado-chip--alerta">En curso</span>
+            </div>
+            <div class="partido-ronda">
+                <span>Jugador 1 <small class="texto-tenue">vs</small> Jugador 3</span>
+                <strong class="resultado-partido">2 - 0</strong>
+            </div>
+            <div class="partido-ronda">
+                <span>Jugador 2 <small class="texto-tenue">vs</small> Jugador 4</span>
+                <a href="cargar-resultado.html" class="boton boton-contorno">Cargar</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

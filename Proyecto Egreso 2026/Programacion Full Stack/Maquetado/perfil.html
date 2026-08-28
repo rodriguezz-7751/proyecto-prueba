@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VT TECH - Perfil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="barra-nav">
+        <div class="barra-nav-perfil">
+            <div class="foto-perfil"></div>
+            <span class="barra-nav-nombre">VT TECH</span>
+        </div>
+        <input type="checkbox" id="menu" class="menu-casilla">
+        <label for="menu" class="menu-boton"><span></span></label>
+        <nav class="barra-nav-enlaces">
+            <a href="menu-jugador.html" class="enlace-nav">Inicio</a>
+            <a href="perfil.html" class="enlace-nav active">Perfil</a>
+            <a href="login.html" class="enlace-nav enlace-nav-peligro">Salir</a>
+        </nav>
+    </header>
+
+    <main class="contenido-torneos">
+        <div class="perfil-cabecera">
+            <div class="perfil-foto">U</div>
+            <div>
+                <h2 class="perfil-nombre">Usuario Ejemplo</h2>
+                <span class="perfil-rol">Jugador</span>
+            </div>
+        </div>
+
+        <section class="tarjeta mb-2">
+            <h3 class="subtitulo-detalle">Mis datos</h3>
+            <div class="detalle-datos">
+                <div class="dato-fila">
+                    <span class="dato-label">Nombre</span>
+                    <span class="dato-valor">Usuario Ejemplo</span>
+                </div>
+                <div class="dato-fila">
+                    <span class="dato-label">Email</span>
+                    <span class="dato-valor">usuario@ejemplo.com</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="tarjeta">
+            <h3 class="subtitulo-detalle">Mis torneos</h3>
+            <div class="tarjeta-torneo">
+                <div class="torneo-imagen"></div>
+                <div class="torneo-info">
+                    <p class="torneo-nombre">Torneo Apertura</p>
+                    <p class="torneo-detalle">Liga · Fútbol</p>
+                </div>
+                <span class="detalle-estado">Activo</span>
+            </div>
+            <div class="tarjeta-torneo">
+                <div class="torneo-imagen"></div>
+                <div class="torneo-info">
+                    <p class="torneo-nombre">Copa de Ejemplo</p>
+                    <p class="torneo-detalle">Suizo · Ajedrez</p>
+                </div>
+                <span class="detalle-estado finalizado">Finalizado</span>
+            </div>
+            <a href="menu-jugador.html" class="boton-volver">← Volver al inicio</a>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <p class="pie-texto">¿Tenés alguna consulta?</p>
+        <a href="mailto:soporte@vttech.com" class="boton-volver">✉ soporte@vttech.com</a>
+        <p class="pie-copy">VT TECH · Sistema de Gestión Deportiva · 2026</p>
+    </footer>
+</body>
+</html>

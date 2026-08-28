@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VT TECH - Panel Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="barra-nav">
+        <div class="barra-nav-perfil">
+            <div class="foto-perfil"></div>
+            <span class="barra-nav-nombre">Administrador</span>
+        </div>
+        <input type="checkbox" id="menu" class="menu-casilla">
+        <label for="menu" class="menu-boton"><span></span></label>
+        <nav class="barra-nav-enlaces">
+            <a href="panel-admin.html" class="enlace-nav active">Panel</a>
+            <a href="login.html" class="enlace-nav enlace-nav-peligro">Salir</a>
+        </nav>
+    </header>
+
+    <main class="contenido-panel">
+        <div class="encabezado-pagina">
+            <div>
+                <h2 class="titulo-panel">Bienvenido, <span>Admin</span></h2>
+                <p class="subtitulo-panel">¿Qué querés gestionar hoy?</p>
+            </div>
+        </div>
+
+        <section class="grilla-admin">
+            <a href="listar-usuarios.html" class="admin-tarjeta">
+                <div class="admin-icono">👥</div>
+                <p class="admin-tarjeta-titulo">Gestionar usuarios</p>
+                <p class="admin-tarjeta-texto">Ver, editar y eliminar usuarios.</p>
+            </a>
+            <a href="torneos-jugador.html" class="admin-tarjeta">
+                <div class="admin-icono">🏆</div>
+                <p class="admin-tarjeta-titulo">Lista de torneos</p>
+                <p class="admin-tarjeta-texto">Consultá todos los torneos del sistema.</p>
+            </a>
+            <a href="crear-torneo.html" class="admin-tarjeta">
+                <div class="admin-icono">➕</div>
+                <p class="admin-tarjeta-titulo">Crear torneo</p>
+                <p class="admin-tarjeta-texto">Creá un nuevo torneo desde cero.</p>
+            </a>
+            <a href="detalle-torneo.html" class="admin-tarjeta">
+                <div class="admin-icono">📊</div>
+                <p class="admin-tarjeta-titulo">Ver posiciones</p>
+                <p class="admin-tarjeta-texto">Revisá tablas y partidos actuales.</p>
+            </a>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <p class="pie-texto">¿Tenés alguna consulta?</p>
+        <a href="mailto:soporte@vttech.com" class="boton-volver">✉ soporte@vttech.com</a>
+        <p class="pie-copy">VT TECH · Sistema de Gestión Deportiva · 2026</p>
+    </footer>
+</body>
+</html>

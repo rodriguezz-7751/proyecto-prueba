@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VT TECH - Mi Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <header class="barra-nav">
+        <div class="logo">VT <span>TECH</span></div>
+        <input type="checkbox" id="menu" class="menu-casilla">
+        <label for="menu" class="menu-boton"><span></span></label>
+        <nav class="enlaces-nav">
+            <a href="menu-jugador.html" class="enlace-nav active">Inicio</a>
+            <a href="torneos-jugador.html" id="enlace-torneos-nav" class="enlace-nav">Torneos</a>
+            <a href="perfil.html" class="enlace-nav">Perfil</a>
+            <a href="login.html" class="enlace-nav enlace-nav-peligro">Salir</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="encabezado-pagina">
+            <div>
+                <h2 class="titulo-pagina">¡Hola, <span id="nombre-usuario">Jugador</span>! 👋</h2>
+                <p class="subtitulo-pagina">Tu centro de control para torneos, resultados y próximo partido.</p>
+            </div>
+        </div>
+
+        <section class="tarjeta mb-2 tarjeta--destacada">
+            <p class="insignia">Próximo partido</p>
+            <h3 class="mt-2">River Plate vs Boca Juniors</h3>
+            <p class="texto-tenue mt-2">📍 Sede Central · 📅 Domingo, 18:00 hs · 🏆 Torneo Apertura 2026</p>
+        </section>
+
+        <section class="grilla-panel">
+            <a href="torneos-jugador.html" id="tarjeta-torneos-panel" class="tarjeta-panel">
+                <div class="icono-panel">🏆</div>
+                <p class="titulo-tarjeta-panel">Mis torneos</p>
+                <p class="texto-tarjeta-panel">Revisá tus inscripciones y torneos disponibles.</p>
+            </a>
+            <a href="detalle-torneo.html" class="tarjeta-panel">
+                <div class="icono-panel">📊</div>
+                <p class="titulo-tarjeta-panel">Posiciones</p>
+                <p class="texto-tarjeta-panel">Mirá las tablas actualizadas del torneo.</p>
+            </a>
+        </section>
+    </main>
+
+
+    <div id="aviso" style="position:fixed;bottom:20px;right:20px;background:#fff3cd;color:#664d03;border:1px solid #ffe69c;padding:12px 16px;border-radius:8px;font-size:0.85rem;max-width:260px;box-shadow:0 2px 8px rgba(0,0,0,0.15);z-index:9999;">
+        Toda información expuesta en la página es de muestra y de exposición para la maquetacion: torneos, partidos, etc.
+        <span onclick="document.getElementById('aviso').remove()" style="cursor:pointer;font-weight:bold;float:right;margin-left:10px;">✕</span>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

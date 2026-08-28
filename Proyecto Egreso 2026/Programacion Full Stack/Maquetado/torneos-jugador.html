@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VT TECH - Mis Torneos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="barra-nav">
+        <div class="logo">VT <span>TECH</span></div>
+        <input type="checkbox" id="menu" class="menu-casilla">
+        <label for="menu" class="menu-boton"><span></span></label>
+        <nav class="enlaces-nav">
+            <a href="menu-jugador.html" class="enlace-nav">Inicio</a>
+            <a href="torneos-jugador.html" class="enlace-nav active">Torneos</a>
+            <a href="perfil.html" class="enlace-nav">Perfil</a>
+            <a href="login.html" class="enlace-nav enlace-nav-peligro">Salir</a>
+        </nav>
+    </header>
+
+    <main class="container" style="max-width: 840px;">
+        <div class="encabezado-pagina">
+            <div>
+                <h2 class="titulo-pagina">Explorar <span>torneos</span></h2>
+                <p class="subtitulo-pagina">Buscá por nombre o deporte y encontrá tus próximas competencias.</p>
+            </div>
+        </div>
+
+        <input type="text" class="control-formulario" placeholder="🔍 Buscar por nombre de torneo o deporte..." style="margin-bottom: 20px;">
+
+        <section class="tarjeta">
+            <h4 class="etiqueta-seccion">Torneos públicos</h4>
+            <article class="torneo-item">
+                <div class="torneo-info">
+                    <h3>Torneo Apertura</h3>
+                    <p class="torneo-meta">Liga · Fútbol</p>
+                </div>
+                <div class="acciones-pagina">
+                    <span class="insignia">Abierto</span>
+                    <a href="login.html" class="boton boton-primario">Inscribirme</a>
+                </div>
+            </article>
+
+            <article class="torneo-item">
+                <div class="torneo-info">
+                    <h3>Torneo de Verano</h3>
+                    <p class="torneo-meta">Eliminación · Básquet</p>
+                </div>
+                <div class="acciones-pagina">
+                    <span class="insignia">Abierto</span>
+                    <a href="login.html" class="boton boton-primario">Inscribirme</a>
+                </div>
+            </article>
+
+            <article class="torneo-item">
+                <div class="torneo-info">
+                    <h3>Copa de Ejemplo</h3>
+                    <p class="torneo-meta">Suizo · Ajedrez</p>
+                </div>
+                <a href="detalle-torneo.html" class="boton boton-contorno">Ver torneo</a>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

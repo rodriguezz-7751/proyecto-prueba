@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VT TECH - Crear Torneo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="barra-nav">
+        <div class="logo">VT <span>TECH</span></div>
+        <input type="checkbox" id="menu" class="menu-casilla">
+        <label for="menu" class="menu-boton"><span></span></label>
+        <nav class="enlaces-nav">
+            <a href="torneos-organizador.html" class="enlace-nav">Mis torneos</a>
+            <a href="login.html" class="enlace-nav enlace-nav-peligro">Salir</a>
+        </nav>
+    </header>
+
+    <main class="container" style="max-width: 700px;">
+        <div class="mb-2">
+            <a href="torneos-organizador.html" class="texto-tenue">← Volver a torneos</a>
+            <h2 class="mt-2">Nuevo <span style="color: var(--primario);">Torneo</span></h2>
+        </div>
+
+        <form action="torneos-organizador.html" method="get">
+            <section class="tarjeta mb-2">
+                <h4 class="etiqueta-seccion">Datos generales</h4>
+                <div class="grilla-formulario">
+                    <div class="campo-formulario">
+                        <label class="etiqueta-campo">Nombre del torneo</label>
+                        <input type="text" class="control-formulario" placeholder="Ej: Copa Primavera 2026" required>
+                    </div>
+                    <div class="fila-formulario">
+                        <div class="campo-formulario">
+                            <label class="etiqueta-campo">Fecha de inicio</label>
+                            <input type="date" class="control-formulario" required>
+                        </div>
+                        <div class="campo-formulario">
+                            <label class="etiqueta-campo">Participantes</label>
+                            <input type="number" class="control-formulario" placeholder="Ej: 16" required>
+                        </div>
+                    </div>
+                    <div class="campo-formulario">
+                        <label class="etiqueta-campo">Formato</label>
+                        <select class="control-formulario">
+                            <option>Liga</option>
+                            <option>Eliminación directa</option>
+                            <option>Sistema Suizo</option>
+                        </select>
+                    </div>
+                    <div class="campo-formulario">
+                        <label class="etiqueta-campo">Visibilidad</label>
+                        <!-- El JS (script.js) escucha el "change" de este select -->
+                        <select id="seleccion-visibilidad" class="control-formulario">
+                            <option value="publico">Público</option>
+                            <option value="privado">Privado</option>
+                        </select>
+                    </div>
+
+                    
+                    <div id="campo-password-torneo" class="campo-formulario" hidden>
+                        <label class="etiqueta-campo">Contraseña del torneo</label>
+                        <input type="password" class="control-formulario" placeholder="Solo para torneos privados">
+                    </div>
+                    <p class="nota-formulario">Si el torneo es privado, no aparecerá en la lista pública para los usuarios.</p>
+                </div>
+            </section>
+
+            <div class="acciones-pagina">
+                <a href="torneos-organizador.html" class="boton boton-contorno" style="flex: 1;">Cancelar</a>
+                <button type="submit" class="boton boton-primario" style="flex: 2;">Crear torneo</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

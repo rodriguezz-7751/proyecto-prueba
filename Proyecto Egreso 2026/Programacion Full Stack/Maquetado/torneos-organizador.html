@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VT TECH - Gestión Organizador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="barra-nav">
+        <div class="logo">VT <span>TECH</span> <span style="font-size: 0.8rem; color: var(--primario);">(Organizador)</span></div>
+        <input type="checkbox" id="menu" class="menu-casilla">
+        <label for="menu" class="menu-boton"><span></span></label>
+        <nav class="enlaces-nav">
+            <a href="torneos-organizador.html" class="enlace-nav active">Mis torneos</a>
+            <a href="panel-admin.html" class="enlace-nav">Panel general</a>
+            <a href="login.html" class="enlace-nav enlace-nav-peligro">Salir</a>
+        </nav>
+    </header>
+
+    <main class="container" style="max-width: 840px;">
+        <div class="encabezado-pagina">
+            <div>
+                <h2 class="titulo-pagina">Gestión de <span>torneos</span></h2>
+                <p class="subtitulo-pagina">Administrá tus competiciones y rondas desde un solo lugar.</p>
+            </div>
+            <a href="crear-torneo.html" class="boton boton-primario">+ Nuevo torneo</a>
+        </div>
+
+        <section class="tarjeta">
+            <h4 class="etiqueta-seccion">Torneos públicos</h4>
+            <article class="torneo-item">
+                <div class="torneo-info">
+                    <h3>Torneo Apertura</h3>
+                    <p class="torneo-meta">Liga · Fútbol</p>
+                </div>
+                <div class="acciones-pagina">
+                    <a href="gestionar-rondas.html" class="boton boton-contorno">Rondas</a>
+                    <a href="detalle-torneo.html" class="boton boton-primario">Ver</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="tarjeta mt-2">
+            <h4 class="etiqueta-seccion">Torneos privados</h4>
+            <article class="torneo-item">
+                <div class="torneo-info">
+                    <h3>Torneo Interno</h3>
+                    <p class="torneo-meta">Privado · Contraseña requerida</p>
+                </div>
+                <div class="acciones-pagina">
+                    <span class="insignia">Privado</span>
+                    <a href="gestionar-rondas.html" class="boton boton-contorno">Rondas</a>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

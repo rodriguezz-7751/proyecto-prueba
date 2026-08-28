@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VT TECH - Usuarios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="barra-nav">
+        <div class="barra-nav-perfil">
+            <div class="foto-perfil"></div>
+            <span class="barra-nav-nombre">Administrador</span>
+        </div>
+        <input type="checkbox" id="menu" class="menu-casilla">
+        <label for="menu" class="menu-boton"><span></span></label>
+        <nav class="barra-nav-enlaces">
+            <a href="panel-admin.html" class="enlace-nav">Panel</a>
+            <a href="login.html" class="enlace-nav enlace-nav-peligro">Salir</a>
+        </nav>
+    </header>
+
+    <main class="contenido-usuarios">
+        <div class="torneos-header">
+            <div>
+                <h2 class="titulo-seccion">Usuarios</h2>
+                <p class="subtitulo-panel">Listado simple para revisar los perfiles del sistema.</p>
+            </div>
+            <a href="#" class="boton-crear">+ Agregar</a>
+        </div>
+
+        <section class="lista-usuarios">
+            <article class="usuario-item">
+                <div class="usuario-main">
+                    <div class="usuario-avatar">U</div>
+                    <div>
+                        <p class="usuario-nombre">Usuario Ejemplo</p>
+                        <p class="usuario-email">usuario@ejemplo.com</p>
+                    </div>
+                </div>
+                <span class="usuario-rol">Jugador</span>
+                <div class="usuario-acciones">
+                    <a href="#" class="boton boton-enlace">Editar</a>
+                    <a href="#" class="boton boton-peligro-contorno">Eliminar</a>
+                </div>
+            </article>
+
+            <article class="usuario-item">
+                <div class="usuario-main">
+                    <div class="usuario-avatar">P</div>
+                    <div>
+                        <p class="usuario-nombre">Participante A</p>
+                        <p class="usuario-email">participantea@ejemplo.com</p>
+                    </div>
+                </div>
+                <span class="usuario-rol">Organizador</span>
+                <div class="usuario-acciones">
+                    <a href="#" class="boton boton-enlace">Editar</a>
+                    <a href="#" class="boton boton-peligro-contorno">Eliminar</a>
+                </div>
+            </article>
+
+            <article class="usuario-item">
+                <div class="usuario-main">
+                    <div class="usuario-avatar">P</div>
+                    <div>
+                        <p class="usuario-nombre">Participante B</p>
+                        <p class="usuario-email">participanteb@ejemplo.com</p>
+                    </div>
+                </div>
+                <span class="usuario-rol">Jugador</span>
+                <div class="usuario-acciones">
+                    <a href="#" class="boton boton-enlace">Editar</a>
+                    <a href="#" class="boton boton-peligro-contorno">Eliminar</a>
+                </div>
+            </article>
+
+            <article class="usuario-item">
+                <div class="usuario-main">
+                    <div class="usuario-avatar">A</div>
+                    <div>
+                        <p class="usuario-nombre">Admin Demo</p>
+                        <p class="usuario-email">admin@ejemplo.com</p>
+                    </div>
+                </div>
+                <span class="usuario-rol admin">Admin</span>
+                <div class="usuario-acciones">
+                    <a href="#" class="boton boton-enlace">Editar</a>
+                    <a href="#" class="boton boton-peligro-contorno">Eliminar</a>
+                </div>
+            </article>
+        </section>
+
+        <a href="panel-admin.html" class="boton-volver">← Volver al panel</a>
+    </main>
+
+    <footer class="pie-pagina">
+        <p class="pie-texto">¿Tenés alguna consulta?</p>
+        <a href="mailto:soporte@vttech.com" class="boton-volver">✉ soporte@vttech.com</a>
+        <p class="pie-copy">VT TECH · Sistema de Gestión Deportiva · 2026</p>
+    </footer>
+</body>
+</html>

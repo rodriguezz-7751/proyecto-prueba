@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VT TECH - Detalle Torneo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="barra-nav">
+        <div class="logo">VT <span>TECH</span></div>
+        <input type="checkbox" id="menu" class="menu-casilla">
+        <label for="menu" class="menu-boton"><span></span></label>
+        <nav class="enlaces-nav">
+            <a href="menu-jugador.html" class="enlace-nav">Inicio</a>
+            <a href="torneos-jugador.html" class="enlace-nav active">Torneos</a>
+            <a href="login.html" class="enlace-nav enlace-nav-peligro">Salir</a>
+        </nav>
+    </header>
+
+    <main class="container" style="max-width: 860px;">
+        <section class="tarjeta mb-2 texto-centrado tarjeta--destacada">
+            <h2 class="titulo-pagina">Torneo Apertura</h2>
+            <p class="texto-tenue">Liga · Fútbol · <span class="insignia">Activo</span></p>
+        </section>
+
+        <section class="tarjeta mb-2">
+            <h3 class="etiqueta-seccion">Información general</h3>
+            <div class="grilla-info">
+                <div class="detalle-item">
+                    <span class="detalle-etiqueta">Tipo</span>
+                    <span class="detalle-valor">Torneo escolar</span>
+                </div>
+                <div class="detalle-item">
+                    <span class="detalle-etiqueta">Modalidad</span>
+                    <span class="detalle-valor">Liga cerrada</span>
+                </div>
+                <div class="detalle-item">
+                    <span class="detalle-etiqueta">Inicio</span>
+                    <span class="detalle-valor">10 de agosto</span>
+                </div>
+                <div class="detalle-item">
+                    <span class="detalle-etiqueta">Participantes</span>
+                    <span class="detalle-valor">8 equipos</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="tarjeta mb-2">
+            <h3 class="etiqueta-seccion">Descripción</h3>
+            <p class="texto-tenue">Este torneo reúne a distintos equipos para jugar una liga regular con partidos semanales. La idea es mantener el calendario ordenado y claro para todos los participantes.</p>
+        </section>
+
+        <div class="acciones-pagina" style="justify-content: center; margin-bottom: 20px;">
+            <a href="#posiciones" class="boton boton-primario">Tabla de posiciones</a>
+            <a href="#partidos" class="boton boton-contorno">Fixture / partidos</a>
+        </div>
+
+        <section id="posiciones" class="tarjeta">
+            <h3 class="etiqueta-seccion">Clasificación actual</h3>
+            <div class="contenedor-tabla">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Pos</th>
+                            <th>Equipo</th>
+                            <th>Puntos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1°</td><td>Equipo A</td><td>9 pts</td></tr>
+                        <tr><td>2°</td><td>Equipo B</td><td>6 pts</td></tr>
+                        <tr><td>3°</td><td>Equipo C</td><td>3 pts</td></tr>
+                        <tr><td>4°</td><td>Equipo D</td><td>0 pts</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="partidos" class="tarjeta mt-2">
+            <h3 class="etiqueta-seccion">Próximos partidos</h3>
+            <div class="tarjeta-ronda">
+                <div class="partido-ronda">
+                    <span>Equipo A</span>
+                    <span class="texto-tenue">vs</span>
+                    <span>Equipo C</span>
+                </div>
+                <span class="estado-chip estado-chip--alerta">Pendiente</span>
+            </div>
+            <div class="tarjeta-ronda mt-2">
+                <div class="partido-ronda">
+                    <span>Equipo B</span>
+                    <span class="texto-tenue">vs</span>
+                    <span>Equipo D</span>
+                </div>
+                <span class="estado-chip estado-chip--alerta">Pendiente</span>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

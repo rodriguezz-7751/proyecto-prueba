@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VT TECH - Cargar Resultado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="barra-nav">
+        <div class="logo">VT <span>TECH</span></div>
+        <input type="checkbox" id="menu" class="menu-casilla">
+        <label for="menu" class="menu-boton"><span></span></label>
+        <nav class="enlaces-nav">
+            <a href="torneos-organizador.html" class="enlace-nav active">Mis torneos</a>
+            <a href="login.html" class="enlace-nav enlace-nav-peligro">Salir</a>
+        </nav>
+    </header>
+
+    <main class="container" style="max-width: 680px;">
+        <div class="mb-2">
+            <a href="gestionar-rondas.html" class="boton-volver">← Volver a rondas</a>
+            <h2 class="titulo-pagina mt-2">Cargar <span>resultado</span></h2>
+        </div>
+
+        <form action="gestionar-rondas.html" method="GET" class="grilla-formulario">
+            <section class="tarjeta">
+                <h4 class="etiqueta-seccion">Marcador final</h4>
+                <div class="fila-formulario" style="align-items: center;">
+                    <div class="texto-centrado">Jugador 1</div>
+                    <div class="fila-formulario" style="grid-template-columns: 70px 1fr 70px; align-items: center;">
+                        <input type="number" min="0" placeholder="0" class="control-formulario texto-centrado">
+                        <div class="texto-centrado texto-tenue">VS</div>
+                        <input type="number" min="0" placeholder="0" class="control-formulario texto-centrado">
+                    </div>
+                    <div class="texto-centrado">Jugador 2</div>
+                </div>
+            </section>
+
+            <section class="tarjeta">
+                <h4 class="etiqueta-seccion">Detalles del partido</h4>
+                <div class="grilla-formulario">
+                    <div class="campo-formulario">
+                        <label class="etiqueta-campo">Fecha del partido</label>
+                        <input type="date" class="control-formulario">
+                    </div>
+                    <div class="campo-formulario">
+                        <label class="etiqueta-campo">Observaciones <span class="texto-tenue">(opcional)</span></label>
+                        <textarea class="control-formulario" rows="4" placeholder="Ej: Partido suspendido por lluvia..."></textarea>
+                    </div>
+                </div>
+            </section>
+
+            <div class="acciones-pagina">
+                <a href="gestionar-rondas.html" class="boton boton-contorno">Cancelar</a>
+                <button type="submit" class="boton boton-primario">Guardar resultado</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

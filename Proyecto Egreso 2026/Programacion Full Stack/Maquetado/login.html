@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VT TECH - Ingresar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="contenedor-central">
+        <section class="tarjeta tarjeta-acceso">
+            <div class="texto-centrado mb-2">
+                <h1 class="logo">VT <span>TECH</span></h1>
+                <p class="texto-tenue">Sistema simple para gestionar torneos y participantes.</p>
+            </div>
+
+            
+            <form class="grilla-formulario" action="menu-jugador.html" method="get">
+                <div class="campo-formulario">
+                    <label class="etiqueta-campo">Correo electrónico</label>
+                    <input type="email" class="control-formulario" placeholder="usuario@ejemplo.com" required autocomplete="email">
+                </div>
+                <div class="campo-formulario">
+                    <label class="etiqueta-campo">Contraseña</label>
+                    <input type="password" class="control-formulario" placeholder="••••••••" required minlength="6" autocomplete="current-password">
+                </div>
+                <div class="campo-formulario">
+                    <label class="etiqueta-campo">Rol de usuario</label>
+                    <select name="rol" class="control-formulario">
+                        <option value="jugador">Jugador</option>
+                        <option value="organizador">Organizador</option>
+                        <option value="admin">Administrador</option>
+                    </select>
+                </div>
+                <p class="nota-formulario">Usá tus datos para entrar al sistema.</p>
+                <button type="submit" class="boton boton-primario">Entrar al sistema</button>
+            </form>
+
+            <p class="texto-centrado mt-2">
+                ¿No tenés cuenta? <a href="registro.html" class="boton-enlace">Registrate acá</a>
+            </p>
+        </section>
+    </main>
+</body>
+</html>

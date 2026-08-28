@@ -1,0 +1,273 @@
+/* ============================================================
+   VT TECH - Hoja de estilos general (versión simple)
+   Índice:
+   1. Reseteo básico
+   2. Barra de navegación
+   3. Botones
+   4. Tarjetas y encabezados
+   5. Portada (landing)
+   6. Formularios
+   7. Perfil de usuario
+   8. Listas de torneos, usuarios y rondas
+   9. Tablas
+   10. Utilidades
+   11. Panel admin y pie de página
+   12. Mobile First: base para celular arriba, @media (min-width) al final agranda para PC
+   ============================================================ */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f7fb;
+    color: #0f172a;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea { font: inherit; }
+img { display: block; max-width: 100%; }
+
+.container {
+    width: 94%;
+    max-width: 1120px;
+    margin: 28px auto 40px;
+}
+
+/* Barra de navegación */
+.barra-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px 5%;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+
+.menu-casilla, .menu-boton { display: none; }
+
+.logo { font-size: 1.45rem; font-weight: 800; }
+.logo span { color: #2563eb; }
+
+.enlaces-nav, .barra-nav-enlaces {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.enlace-nav {
+    padding: 8px 10px;
+    border-radius: 999px;
+    color: #64748b;
+    font-weight: 700;
+}
+.enlace-nav.active, .enlace-nav:hover { color: #2563eb; background: #eff6ff; }
+.enlace-nav-peligro { color: #ef4444; }
+.enlace-nav-peligro:hover { color: #b91c1c; background: #fee2e2; }
+
+.barra-nav-perfil { display: flex; align-items: center; gap: 10px; }
+.foto-perfil {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: #dbeafe;
+    border: 2px solid #2563eb;
+}
+.barra-nav-nombre { font-weight: 700; }
+
+/* Botones */
+.boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    font-weight: 700;
+    cursor: pointer;
+}
+.boton-primario { background: #2563eb; color: #ffffff; }
+.boton-primario:hover { background: #1d4ed8; }
+.boton-contorno { background: transparent; border-color: #2563eb; color: #2563eb; }
+.boton-secundario { background: #f8fafc; color: #0f172a; border-color: #e2e8f0; }
+.boton-volver { color: #2563eb; font-weight: 700; }
+.boton-crear { background: #2563eb; color: #ffffff; padding: 10px 16px; border-radius: 999px; font-weight: 700; }
+.boton-enlace { color: #2563eb; font-weight: 700; }
+.boton-peligro-contorno { color: #ef4444; border: 1px solid #ef4444; padding: 6px 12px; border-radius: 999px; font-weight: 700; }
+
+/* Tarjetas y encabezados */
+.tarjeta {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 18px;
+}
+
+.encabezado-pagina {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+.titulo-pagina, .titulo-seccion, .titulo-panel { font-size: 1.7rem; font-weight: 800; }
+.titulo-pagina span, .titulo-seccion span, .titulo-panel span { color: #2563eb; }
+.subtitulo-pagina, .subtitulo-panel { color: #64748b; margin-top: 4px; }
+.acciones-pagina { display: flex; flex-direction: column; gap: 10px; }
+.acciones-pagina .boton { width: 100%; justify-content: center; }
+
+.torneos-header {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px; margin-bottom: 20px;
+}
+
+
+.seccion-destacada {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.texto-destacado { flex: 1; min-width: 280px; }
+.texto-destacado h1 { font-size: 2rem; line-height: 1.15; margin-bottom: 10px; }
+.texto-destacado h1 span { color: #2563eb; }
+.texto-destacado p { color: #64748b; max-width: 620px; }
+
+.grilla-3 { display: flex; flex-wrap: wrap; gap: 16px; }
+.grilla-3 article { flex: 1; min-width: 160px; }
+
+.grilla-panel { display: flex; flex-wrap: wrap; gap: 16px; }
+.tarjeta-panel, .admin-tarjeta {
+    flex: 1;
+    min-width: 200px;
+    display: block;
+    padding: 18px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+}
+.icono-panel, .admin-icono { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; background: #eff6ff; margin-bottom: 10px; }
+.titulo-tarjeta-panel, .admin-tarjeta-titulo { font-weight: 700; margin-bottom: 4px; }
+.texto-tarjeta-panel, .admin-tarjeta-texto, .torneo-detalle, .usuario-email { color: #64748b; font-size: 0.9rem; }
+
+/* Formularios */
+.grilla-formulario, .fila-formulario { display: flex; flex-direction: column; gap: 12px; }
+.campo-formulario { display: flex; flex-direction: column; gap: 6px; }
+.etiqueta-campo { font-weight: 700; }
+.control-formulario {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #ffffff;
+}
+.control-formulario:focus { outline: none; border-color: #2563eb; }
+.nota-formulario { color: #64748b; font-size: 0.9rem; }
+
+.contenedor-central {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+.tarjeta-acceso { width: 100%; max-width: 460px; padding: 20px 22px; }
+
+/* Perfil de usuario */
+.perfil-cabecera {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    background: #eff6ff;
+    margin-bottom: 18px;
+}
+.perfil-foto {
+    width: 76px; height: 76px; border-radius: 50%; border: 3px solid #2563eb;
+    display: flex; align-items: center; justify-content: center; font-weight: 800; color: #2563eb;
+    background: #dbeafe;
+}
+.perfil-nombre { font-size: 1.4rem; font-weight: 800; }
+.subtitulo-detalle { font-size: 1rem; font-weight: 700; color: #64748b; text-transform: uppercase; margin-bottom: 12px; }
+.detalle-datos { display: flex; flex-direction: column; gap: 8px; }
+.dato-fila { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #e2e8f0; }
+.dato-fila:last-child { border-bottom: none; }
+.dato-label { color: #64748b; font-weight: 700; }
+.dato-valor { font-weight: 600; }
+
+.tarjeta-torneo { display: flex; align-items: center; gap: 12px; padding: 12px; border: 1px solid #e2e8f0; border-radius: 14px; margin-bottom: 10px; }
+.torneo-imagen { width: 52px; height: 52px; border-radius: 12px; background: #dbeafe; }
+.torneo-info { flex: 1; }
+.torneo-nombre, .usuario-nombre { font-weight: 700; }
+.detalle-estado.finalizado { background: #e2e8f0; color: #64748b; }
+
+/* Listas de torneos, usuarios y rondas */
+.torneo-item, .usuario-item, .tarjeta-ronda {
+    display: flex; flex-direction: column; align-items: flex-start; gap: 12px;
+    padding: 14px 16px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px;
+}
+.torneo-info h3 { margin-bottom: 4px; }
+.torneo-meta { color: #64748b; font-size: 0.94rem; }
+/* Todas estas son la misma "etiqueta verde" repetida en distintas páginas */
+.insignia, .estado-chip, .detalle-estado, .perfil-rol, .usuario-rol {
+    display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 999px; background: #dcfce7; color: #22c55e; font-size: 0.8rem; font-weight: 700;
+}
+.estado-chip--alerta { background: #fef3c7; color: #f59e0b; }
+
+.lista-usuarios { display: flex; flex-direction: column; gap: 12px; }
+.usuario-main { display: flex; align-items: center; gap: 12px; }
+.usuario-avatar { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #eff6ff; color: #2563eb; font-weight: 800; }
+.usuario-rol.admin { background: #fee2e2; color: #ef4444; }
+.usuario-acciones { display: flex; gap: 10px; }
+
+.partido-ronda { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid #e2e8f0; }
+.partido-ronda:last-child { border-bottom: none; }
+.resultado-partido { color: #2563eb; }
+
+
+.grilla-info { display: flex; flex-wrap: wrap; gap: 14px; }
+.detalle-item { flex: 1; min-width: 120px; display: flex; flex-direction: column; gap: 4px; }
+.detalle-etiqueta { color: #64748b; font-size: 0.85rem; text-transform: uppercase; }
+.detalle-valor { font-weight: 700; }
+
+/* Tablas */
+.table { width: 100%; border-collapse: collapse; }
+.table th, .table td { padding: 10px; border-bottom: 1px solid #e2e8f0; text-align: left; }
+.table thead th { color: #64748b; text-transform: uppercase; font-size: 0.8rem; }
+
+/* Utilidades */
+.texto-centrado { text-align: center; }
+.texto-tenue { color: #64748b; }
+.mt-2 { margin-top: 18px; }
+.mb-2 { margin-bottom: 18px; }
+.etiqueta-seccion { font-size: 1rem; font-weight: 700; color: #64748b; text-transform: uppercase; margin-bottom: 12px; }
+
+/* Panel admin y pie de página */
+.pie-pagina { padding: 24px 5% 30px; text-align: center; color: #64748b; }
+.pie-texto { font-weight: 700; margin-bottom: 6px; }
+.pie-copy { font-size: 0.85rem; margin-top: 6px; }
+.contenido-panel, .contenido-usuarios, .contenido-torneos { width: 92%; max-width: 940px; margin: 28px auto 34px; }
+.grilla-admin { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 20px; }
+
+/* Mobile first: arriba está la base para celular.
+   Acá agrandamos el diseño solo cuando la pantalla es grande */
+@media (min-width: 768px) {
+    .container { width: 92%; }
+    .texto-destacado h1 { font-size: 2.6rem; }
+
+    .fila-formulario { flex-direction: row; }
+    .fila-formulario > * { flex: 1; }
+
+    .torneo-item, .usuario-item, .tarjeta-ronda { flex-direction: row; justify-content: space-between; align-items: center; }
+
+    .acciones-pagina { flex-direction: row; flex-wrap: wrap; }
+    .acciones-pagina .boton { width: auto; }
+}
